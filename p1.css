@@ -78,6 +78,8 @@ button {
    border-radius: 20px;
    padding: 5px;
    border: solid whitesmoke 2px;
+   cursor: pointer;
+   
 }
 
 .up-design svg {
