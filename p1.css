@@ -1,0 +1,148 @@
+@keyframes code-line-color {
+   0% {
+      background-color: rgb(226, 234, 245);
+   }
+
+   50% {
+      background-color: rgba(220, 20, 60, 0.8);
+   }
+
+   100% {
+      background-color: rgb(226, 234, 245);
+   }
+}
+
+@keyframes rect-color {
+   from {
+      fill: #ADD8E6;
+   }
+
+   to {
+      fill: rgba(220, 20, 60, 0.5);
+   }
+}
+
+@keyframes rect-move-for {
+   from {
+      transform: translateX(0px);
+   }
+
+   to {
+      transform: translateX(60px);
+   }
+}
+
+@keyframes rect-move-back {
+   from {
+      transform: translateX(0px);
+   }
+
+   to {
+      transform: translateX(-60px);
+   }
+}
+
+@keyframes hover-button {
+   to {
+      transform-origin: left top;
+      transform: scale(1.5);
+   }
+}
+
+@keyframes waving {
+   to {
+      transform: scale(1.2);
+   }
+}
+
+body {
+   background-color: rgb(226, 234, 245);
+   font-family: 'Courier New';
+   margin: 0;
+}
+
+h5 {
+   font-variant: small-caps;
+   font-size: 20px;
+   color: white;
+   margin-left: 20px;
+}
+
+nav,
+#code-print {
+   margin-left: 30px;
+}
+
+button {
+   background-color: white;
+   border-radius: 20px;
+   padding: 5px;
+   border: solid whitesmoke 2px;
+}
+
+.up-design svg {
+   max-height: 100%;
+   max-width: 100%;
+   animation: waving 3s cubic-bezier(0.23, 1, 0.320, 1);
+   animation-fill-mode: forwards;
+   animation-iteration-count: 2;
+   animation-direction: alternate-reverse;
+   position: absolute;
+   top: 0;
+   z-index: -1;
+}
+
+.up-design {
+   padding-bottom: 150px;
+}
+
+
+.code-trace {
+   width: 70px;
+   height: 70px;
+}
+
+#code-button {
+   width: 50px;
+   height: 50px;
+}
+
+#code-button:hover {
+   animation-name: hover-button;
+   animation-duration: 1s;
+   animation-fill-mode: forwards;
+}
+
+svg rect {
+   fill: #ADD8E6;
+}
+
+svg rect.active {
+   animation-name: rect-color;
+   animation-duration: 1s;
+   animation-direction: alternate-reverse;
+   animation-fill-mode: forwards;
+}
+
+svg {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+#animation {
+   border: gray dotted 2px;
+   padding: 20px;
+   background-color: white;
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+#line1.active,
+#line2.active,
+#line3.active,
+#line4.active {
+   animation-name: code-line-color;
+   animation-duration: 1s;
+}
